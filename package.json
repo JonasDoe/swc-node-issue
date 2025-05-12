@@ -1,0 +1,17 @@
+{
+  "name": "swc-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:swc-node": " node --import @swc-node/register/esm-register --test src/**/*.test.ts",
+    "test:ts-node": " node --import \"data:text/javascript,import { register } from 'node:module'; import { pathToFileURL } from 'node:url'; register('ts-node/esm', pathToFileURL('./'))\" --test src/**/*.test.ts"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.10.10",
+    "@types/node": "^22.15.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
